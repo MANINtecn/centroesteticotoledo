@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Clock, Calendar as CalendarIcon } from 'lucide-react';
+import catBg from '../assets/Background 1.png';
 
 // Dummy data for available slots
 const AVAILABLE_SLOTS = [
@@ -117,7 +118,7 @@ export default function BookingSection() {
         width: '50%',
         height: '120%', 
         maxWidth: '600px',
-        backgroundImage: 'url("/src/assets/Background 1.png")',
+        backgroundImage: `url(${catBg})`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right center',
