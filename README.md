@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Centro Estético Toledo 🐾
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web moderna e responsiva desenvolvida para um Petshop e Centro de Estética Animal. O projeto foca em oferecer uma experiência premium para os donos de pets, permitindo visualizar produtos e realizar agendamentos online de forma intuitiva.
 
-Currently, two official plugins are available:
+![Centro Estético Toledo Preview](https://github.com/user-attachments/assets/placeholder)
+_(Você pode adicionar um print da tela inicial aqui depois)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+- **Frontend:** [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilização:** CSS Moderno (Váriaveis CSS, Flexbox, Grid, Glassmorphism)
+- **Ícones:** [Lucide React](https://lucide.dev/)
+- **Banco de Dados / Backend:** [Supabase](https://supabase.com/)
+- **Deploy:** [Vercel](https://vercel.com/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades Principais
 
-## Expanding the ESLint configuration
+- **Layout "Widescreen" Imersivo:** Design expansivo que utiliza todo a largura da tela para uma visualização moderna e limpa.
+- **Carrossel de Produtos:** Integração com Supabase para buscar e exibir produtos em destaque com efeito de scroll infinito.
+- **Agendamento Online:** Seção interativa com grade de horários (08:00 às 18:00) para selecionar o melhor momento para o atendimento.
+- **Design Responsivo:** Interface totalmente adaptada para dispositivos móveis e desktops.
+- **Identidade Visual Premium:** Uso de paleta de cores harmoniosa, tipografia moderna (Outfit) e efeitos visuais como painéis de vidro (glassmorphism).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Como rodar o projeto localmente
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone o repositório:**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+   ```bash
+   git clone https://github.com/SEU-USUARIO/NOMEDOREPO.git
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Instale as dependências:**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```bash
+   cd NOMEDOREPO
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. **Configure as variáveis de ambiente:**
+   Crie um arquivo `.env` na raiz do projeto com suas credenciais do Supabase:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```env
+   VITE_SUPABASE_URL=sua_url_supabase
+   VITE_SUPABASE_ANON_KEY=sua_chave_anonima
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+## 🎨 Destaques de UI/UX
+
+- **Alinhamento Preciso:** Elementos visuais (como a imagem do gato na seção de agendamento) posicionados estrategicamente para criar profundidade ("saindo da tela").
+- **Interatividade:** Feedbacks visuais em botões e seletores de horário.
+
+---
+
+Desenvolvido com 🧡 por Ícaro.
