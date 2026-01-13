@@ -5,7 +5,7 @@ import { Instagram, Facebook, MapPin, Phone } from 'lucide-react';
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: 'white', marginTop: '4rem', padding: '3rem 0', borderTop: '1px solid var(--border)' }}>
-      <div className="container">
+      <div className="container-wide">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           
           <div>

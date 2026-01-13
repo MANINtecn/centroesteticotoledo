@@ -4,12 +4,16 @@ import { Clock, Calendar as CalendarIcon } from 'lucide-react';
 
 // Dummy data for available slots
 const AVAILABLE_SLOTS = [
-  { id: 1, time: '09:00', label: 'Manhã' },
-  { id: 2, time: '10:30', label: 'Manhã' },
-  { id: 3, time: '13:00', label: 'Tarde' },
-  { id: 4, time: '14:30', label: 'Tarde' },
-  { id: 5, time: '16:00', label: 'Tarde' },
-  { id: 6, time: '17:30', label: 'Noite' },
+  { id: 1, time: '08:00', label: 'Manhã' },
+  { id: 2, time: '09:00', label: 'Manhã' },
+  { id: 3, time: '10:00', label: 'Manhã' },
+  { id: 4, time: '11:00', label: 'Manhã' },
+  { id: 5, time: '13:00', label: 'Tarde' },
+  { id: 6, time: '14:00', label: 'Tarde' },
+  { id: 7, time: '15:00', label: 'Tarde' },
+  { id: 8, time: '16:00', label: 'Tarde' },
+  { id: 9, time: '17:00', label: 'Tarde' },
+  { id: 10, time: '18:00', label: 'Noite' },
 ];
 
 export default function BookingSection() {
@@ -22,7 +26,7 @@ export default function BookingSection() {
       backgroundColor: '#f8f9fa',
       overflow: 'hidden' 
     }}>
-      <div className="container">
+      <div className="container-wide">
         <div className="booking-grid" style={{ 
           display: 'grid', 
           gap: '2rem', 
@@ -32,7 +36,7 @@ export default function BookingSection() {
         }}>
           
           {/* Left Content - Text & Slots */}
-          <div style={{ zIndex: 10 }}>
+          <div style={{ zIndex: 10, width: '100%', maxWidth: '800px' }}>
             <span style={{ 
               display: 'inline-block', 
               color: 'var(--primary)', 
@@ -53,9 +57,9 @@ export default function BookingSection() {
             {/* Slots Grid */}
             <div style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', 
+              gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', 
               gap: '1rem',
-              maxWidth: '500px',
+              width: '100%',
               marginBottom: '2rem'
             }}>
               {AVAILABLE_SLOTS.map((slot) => (
@@ -99,26 +103,27 @@ export default function BookingSection() {
             </button>
           </div>
 
-          {/* Right Content - Cat Background Image */}
-          <div style={{ 
-            position: 'absolute',
-            right: 0, // Strict alignment to container edge
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '100%',
-            height: '120%', // Make it taller to cover
-            maxWidth: '500px', // Limit max width
-            backgroundImage: 'url("/src/assets/Background 1.png")',
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center right',
-            opacity: 1,
-            pointerEvents: 'none',
-            zIndex: 0
-          }} />
+
           
         </div>
       </div>
+
+      {/* Right Content - Cat Background Image - Flush to viewport right */}
+      <div style={{ 
+        position: 'absolute',
+        right: 0,
+        top: '50%',
+        transform: 'translateY(-50%)',
+        width: '50%',
+        height: '120%', 
+        maxWidth: '600px',
+        backgroundImage: 'url("/src/assets/Background 1.png")',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'right center',
+        pointerEvents: 'none',
+        zIndex: 0
+      }} />
 
       <style>{`
         .booking-grid {

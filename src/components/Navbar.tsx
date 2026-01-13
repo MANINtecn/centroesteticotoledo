@@ -14,7 +14,7 @@ export default function Navbar() {
       zIndex: 50,
       padding: '0.75rem 1.5rem'
     }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div className="container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'var(--primary)', fontWeight: 'bold', fontSize: '1.5rem' }}>
           <img src="/src/assets/logo.webp" alt="Centro Estético Toledo Logo" style={{ height: '48px', width: 'auto', borderRadius: '50%' }} />
           <span>Centro Estético Toledo</span>

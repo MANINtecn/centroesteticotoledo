@@ -14,7 +14,7 @@ export default function Home() {
         overflow: 'hidden'
       }}>
         {/* ... Hero Content ... */}
-        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+        <div className="container-wide" style={{ position: 'relative', zIndex: 10 }}>
           <div className="hero-grid" style={{ display: 'grid', gap: '2rem', alignItems: 'center' }}>
             {/* Left Content */}
             <div style={{ maxWidth: '600px' }}>
@@ -66,7 +66,7 @@ export default function Home() {
       <BookingSection />
 
       <section style={{ padding: '5rem 0' }}>
-        <div className="container">
+        <div className="container-wide">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
             {[
               { icon: <Star size={32} color="var(--primary)" />, title: 'Profissionais Qualificados', text: 'Equipe treinada para oferecer o melhor tratamento.' },
