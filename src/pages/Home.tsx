@@ -1,6 +1,5 @@
 
-import { ArrowRight, Star, Clock, Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Star, Clock, Shield } from 'lucide-react';
 import ProductCarousel from '../components/ProductCarousel';
 import BookingSection from '../components/BookingSection';
 
