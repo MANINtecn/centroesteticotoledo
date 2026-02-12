@@ -14,7 +14,7 @@ const AVAILABLE_SLOTS = [
   { id: 7, time: '15:00', label: 'Tarde' },
   { id: 8, time: '16:00', label: 'Tarde' },
   { id: 9, time: '17:00', label: 'Tarde' },
-  { id: 10, time: '18:00', label: 'Noite' },
+  { id: 10, time: 'DOUGLASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS:00', label: 'Noite' },
 ];
 
 export default function BookingSection() {
